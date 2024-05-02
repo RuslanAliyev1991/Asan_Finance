@@ -1,0 +1,100 @@
+ <div class="container" style="border: 2px solid red;">
+    <br>
+    <span class="text-muted font-weight-bold">(Sorğunun tarixi: <?= date('d.m.Y'); ?>)</span>
+
+    <!-- AZE Melumatlari -->
+    <?php
+    //print_r($response);
+    ?>
+    <div style="text-align: center;" class="mb-3">
+      <img src="<?= 'data:image/png;base64,' . $response['Image']; ?>">
+    </div>
+    <table class="">
+      <tr>
+        <td>Fin kod</td>
+        <td><?= $response['PIN'] ?></td>
+      </tr>
+      <tr>
+        <td>Seriya</td>
+        <td><?= $response['DocumentSeria'] ?></td>
+      </tr>
+      <tr>
+        <td>Seriya nömrəsi</td>
+        <td><?= $response['DocumentNumber'] ?></td>
+      </tr>
+      <tr>
+        <td>Ad</td>
+        <td><?= $response['Name'] ?></td>
+      </tr>
+      <tr>
+        <td>Soyad</td>
+        <td><?= $response['Surname'] ?></td>
+      </tr>
+      <tr>
+        <td>Ata adı</td>
+        <td><?= $response['Patronymic'] ?></td>
+      </tr>
+      <tr>
+        <td>Doğum tarixi</td>
+        <td><?= $response['BirthDate'] ?></td>
+      </tr>
+      <tr>
+        <td>Doğum yeri</td>
+        <td><?= $response['BirthAddress'] ?></td>
+      </tr>
+      <tr>
+        <td>Cinsi</td>
+        <td><?= $response['Gender'] ?></td>
+      </tr>
+      <tr>
+        <td>Qeydiyyat ünvanı</td>
+        <td><?= $response['RegistrationAddress'] ?></td>
+      </tr>
+      <tr>
+        <td>Verilmə tarixi</td>
+        <td><?= $response['GivenDate'] ?></td>
+      </tr>
+      <tr>
+        <td>ActivationDate</td>
+        <td><?= $response['ActivationDate'] ?></td>
+      </tr>
+      <tr>
+        <td>Bitmə tarixi</td>
+        <td><?= $response['ExpireDate'] ?></td>
+      </tr>
+      <tr>
+        <td>Ailə vəziyyəti</td>
+        <td><?= $response['MaritalStatus'] ?></td>
+      </tr>
+      <tr>
+        <td>Vəsiqəni verən orqan</td>
+        <td><?= $response['GivenOrganizatoin'] ?></td>
+      </tr>
+      <tr>
+        <td>Vətəndaşlıq</td>
+        <td><?= $response['Citizenship'] ?></td>
+      </tr>
+      <tr>
+        <td>Hərbi Status</td>
+        <td><?= $response['MilitaryStatus'] ?></td>
+      </tr>
+      <tr>
+        <td>Qan qrupu</td>
+        <td><?= $response['BloodType'] ?></td>
+      </tr>
+      <tr>
+        <td>Gözlərinin rəngi</td>
+        <td><?= $response['EyeColor'] ?></td>
+      </tr>
+      <tr>
+        <td>Boyu</td>
+        <td><?= $response['Height'] ?></td>
+      </tr>
+      <tr>
+        <td>Imza</td>
+        <td>
+          <img src="<?= 'data:image/png;base64,' . $response['Sign']; ?>">
+        </td>
+      </tr>
+    </table>
+  </div>
